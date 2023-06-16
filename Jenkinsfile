@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/actividad2clase2.git'
+                git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/repomaven.git'
             }
         }
 
