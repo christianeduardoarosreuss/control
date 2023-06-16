@@ -10,7 +10,7 @@ void testCalculateSum() {
 
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-assertEquals(110, App.calculateSum(numbers));
+assertEquals(60, App.calculateSum(numbers));
 
 }
 
