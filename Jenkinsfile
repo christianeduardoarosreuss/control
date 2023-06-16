@@ -1,8 +1,7 @@
-
 def COLOR_MAP = [
     'SUCCESS': 'good', 
-    'FAILURE':'danger', 
-    ]
+    'FAILURE': 'danger'
+]
 
 pipeline {
     agent any
@@ -14,7 +13,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+<<<<<<< HEAD
                 git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/repomaven.git'
+=======
+                git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/control.git'
+>>>>>>> 238b700ecc17eaa9503c5fa754c8577a9ed5d43c
             }
         }
 
@@ -39,14 +42,14 @@ pipeline {
                 }
             }
         }
+    }
 
-        post{
-        always{
+    post {
+        always {
             echo 'Slack Notification'
             slackSend channel: '#alertas',
             color: COLOR_MAP[currentBuild.currentResult], 
             message: "*${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More Info at: ${env.BUILD_URL}"
         }
-    }
     }
 }
