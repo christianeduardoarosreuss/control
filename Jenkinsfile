@@ -13,11 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-<<<<<<< HEAD
-                git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/repomaven.git'
-=======
                 git branch: 'main', url: 'https://github.com/christianeduardoarosreuss/control.git'
->>>>>>> 238b700ecc17eaa9503c5fa754c8577a9ed5d43c
             }
         }
 
